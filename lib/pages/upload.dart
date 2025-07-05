@@ -56,7 +56,7 @@ class _UploadPageState extends State<UploadPage> {
       });
 
       final response = await dio.post(
-        'http://192.168.100.4:8000/api/upload',
+        'https://lumendeotv-project-backend.onrender.com/api/upload',
         data: formData,
         cancelToken: _cancelToken,
         onSendProgress: (int sent, int total) {
@@ -115,7 +115,7 @@ Widget build(BuildContext context) {
         Center(
           child: Container(
             padding: const EdgeInsets.all(16.0),
-            color: Colors.black.withOpacity(0.5),
+            color: Colors.white.withOpacity(0.5),
             constraints: const BoxConstraints(maxWidth: 400), // optional max width
             child: _isUploading
                 ? UploadProgressWidget(
